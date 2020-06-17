@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="TPCGuzman.index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Usuarios.aspx.cs" Inherits="TPCGuzman.Usuarios" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -80,7 +80,7 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="Usuarios.aspx">Listar</a>
+                        <a class="collapse-item" href="#">Listar</a>
                         <a class="collapse-item" href="#">Clientes</a>
                         <a class="collapse-item" href="#">Empleados</a>
                     </div>
@@ -173,7 +173,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Tipo de Usuarios</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Usuarios</h1>
                     </div>
 
                     <!-- DataTales Example -->
@@ -186,23 +186,35 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Descripcion</th>
+                                            <th>Nombre</th>
+                                            <th>Apellido</th>
+                                            <th>Mail</th>
+                                            <th>Celular</th>
+                                            <th>Usuario</th>
+                                            <th>Tipo Usuario</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Descripcion</th>
+                                            <th>Nombre</th>
+                                            <th>Apellido</th>
+                                            <th>Mail</th>
+                                            <th>Celular</th>
+                                            <th>Usuario</th>
+                                            <th>Tipo Usuario</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <%foreach (var item in listaTipoUsuarios)
+                                        <%foreach (var item in listaPersonas)
                                             {
                                         %>
                                         <tr>
-                                            <td><% = item.Id %></td>
-                                            <td><% = item.Descripcion %></td>
+                                            <td><% = item.Nombre %></td>
+                                            <td><% = item.Apellido %></td>
+                                            <td><% = item.Mail %></td>
+                                            <td><% = item.Celular %></td>
+                                            <td><% = item.Usuario %></td>
+                                            <td><% = item.tipoUsuario.Descripcion %></td>
                                         </tr>
                                         <% } %>
                                     </tbody>
@@ -254,6 +266,10 @@
             </div>
         </div>
     </div>
+    <form id="form1" runat="server">
+        <div>
+        </div>
+    </form>
     <!--form-->
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

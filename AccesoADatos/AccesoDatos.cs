@@ -15,7 +15,7 @@ namespace AccesoADatos
 
         public AccesoDatos()
         {
-            conexion = new SqlConnection("data source=MAXIMILIANO8285\\SQLEXPRESS; initial catalog=POKEMON_DB; integrated security=sspi");
+            conexion = new SqlConnection(@"data source =.\SQLEXPRESS; initial catalog= APP_DELIBERY; integrated security=sspi");
             comando = new SqlCommand();
             comando.Connection = conexion;
         }

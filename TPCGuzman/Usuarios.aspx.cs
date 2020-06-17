@@ -9,20 +9,21 @@ using Negocio;
 
 namespace TPCGuzman
 {
-    public partial class index : System.Web.UI.Page
+    public partial class Usuarios : System.Web.UI.Page
     {
-        public List<TipoUsuario> listaTipoUsuarios { get; set; }
+        public List<Persona> listaPersonas { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
-                TipoUsuarioNegocio negocio = new TipoUsuarioNegocio();
-                listaTipoUsuarios = negocio.listar();
+                PersonaNegocio personaNegocio = new PersonaNegocio();
+                listaPersonas = personaNegocio.listar();
+
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                throw ex;
+                throw;
             }
 
         }
